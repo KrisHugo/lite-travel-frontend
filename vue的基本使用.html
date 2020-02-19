@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <h2>{{msg}}</h2> 
+      <h2>{{msg2}}</h2>
+      <h2>{{1+1}}</h2>
+      <h3>{{isTrue}}</h3>
+      <h4>{{str.split('').reverse().join('')}}</h4>
+    </div>
+    <!-- 引包 -->
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js">
+    </script>
+    <script type="text/javascript">
+        // 创建实例化对象
+        new Vue({
+            el:"#app",//目的地
+            data:{
+                //数据属性
+                //既可以是是一个对象，也可以是一个函数
+                msg:'黄瓜',
+                msg2:'香蕉',
+                isTrue:1==1,
+                str: 'hello Vue',
+
+            },
+            template:''
+        });
+    </script>
+</body>
+</html>
