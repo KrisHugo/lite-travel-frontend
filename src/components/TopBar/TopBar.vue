@@ -1,11 +1,11 @@
 <template>
-        <b-navbar id="TopBar" toggleable="lg" class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light">
+        <b-navbar id="TopBar" toggleable="lg" class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" style="float: top">
             <b-container>
                 <b-navbar-brand class="navbar-brand" to="/">
                     轻旅
                 </b-navbar-brand>
                 <b-navbar-toggle class="navbar-toggler" type="button" target="nav-collapse">Menu</b-navbar-toggle>
-                <b-collapse id="nav-collapse" class="navbar-collapse ml-auto" is-nav>
+                <b-collapse id="nav-collapse" class="collapse navbar-collapse  ml-auto" is-nav>
                     <b-navbar-nav class="navbar-nav ml-auto">
                         <b-nav-item class="nav-item active" to="/">Index</b-nav-item>
                         <b-nav-item class="nav-item" to="/places">Places</b-nav-item>

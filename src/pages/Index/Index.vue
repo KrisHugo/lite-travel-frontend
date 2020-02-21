@@ -1,66 +1,224 @@
 <template>
-    <div id="Index" class="hero-wrap bg" style="height: 788px; width: 1290px">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
-                 data-scrollax-parent="true">
-                <div class="col-md-9 ftco-animate mb-5 pb-5 text-center text-md-left text-cus">
-                    <h1 class="mb-4">Discover <br>A new Place</h1>
-                    <p>Find great places to stay, eat, shop, or visit from local experts</p>
+    <div id="Index" >
+        <BG/>
+        <section class="ftco-section justify-content-end ftco-search">
+            <div class="container-wrap ml-auto">
+                <div class="row no-gutters">
+                    <div class="col-md-12 nav-link-wrap">
+                        <div class="nav nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link" v-bind:class="{'active' : vPills1}" v-on:click="activePills1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Flight</a>
+
+                            <a class="nav-link" v-bind:class="{'active': vPills2}" v-on:click="activePills2" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Hotel</a>
+
+                            <a class="nav-link" v-bind:class="{'active': vPills3}" v-on:click="activePills3" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Car Rent</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 tab-wrap">
+
+                        <div class="tab-content p-4 px-5" id="v-pills-tabContent">
+
+                            <div class="tab-pane fade" v-bind:class="{'show active' : vPills1}" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                                <form action="#" class="search-destination">
+                                    <div class="row">
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">From</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-my_location"></span></div>
+                                                    <input type="text" class="form-control" placeholder="From">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Where</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control" placeholder="Where">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Check In</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control checkin_date" placeholder="Check In">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Check Out</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control checkout_date" placeholder="From">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Travelers</label>
+                                                <div class="form-field">
+                                                    <div class="select-wrap">
+                                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                            <option value="">3</option>
+                                                            <option value="">4</option>
+                                                            <option value="">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-self-end">
+                                            <div class="form-group">
+                                                <div class="form-field">
+                                                    <input type="submit" value="Search" class="form-control btn btn-primary">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" v-bind:class="{'show active' : vPills2}" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                                <form action="#" class="search-destination">
+                                    <div class="row">
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Check In</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control checkin_date" placeholder="Check In">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Check Out</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control checkout_date" placeholder="From">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Guest</label>
+                                                <div class="form-field">
+                                                    <div class="select-wrap">
+                                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                            <option value="">3</option>
+                                                            <option value="">4</option>
+                                                            <option value="">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-self-end">
+                                            <div class="form-group">
+                                                <div class="form-field">
+                                                    <input type="submit" value="Search" class="form-control btn btn-primary">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" v-bind:class="{'show active' : vPills3}"  id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-effect-tab">
+                                <form action="#" class="search-destination">
+                                    <div class="row">
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Where</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control" placeholder="Where">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Check In</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control checkin_date" placeholder="Check In">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-items-end">
+                                            <div class="form-group">
+                                                <label for="#">Check Out</label>
+                                                <div class="form-field">
+                                                    <div class="icon"><span class="icon-map-marker"></span></div>
+                                                    <input type="text" class="form-control checkout_date" placeholder="From">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md align-self-end">
+                                            <div class="form-group">
+                                                <div class="form-field">
+                                                    <input type="submit" value="Search" class="form-control btn btn-primary">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
 <script>
+    import BG from "../../components/BG/Background.vue"
     export default {
         name: "Index",
-        data: function () {
-            return {
-                screenHeight: document.documentElement.clientHeight,
-                screenWidth: document.documentElement.clientWidth,
+        data(){
+            return{
+                vPills1:true,
+                vPills2:false,
+                vPills3:false,
             }
         },
-        watch: {
-            'screenWidth': function (val) { //监听屏幕宽度变化
-                let oIframe = document.getElementById("Index");
-                oIframe.style.width = (Number(val)) + 'px';
+        components:{
+            BG
+        },
+        mounted(){
+
+        },
+        methods: {
+            activePills1 : function () {
+                this.vPills1 = true;
+                this.vPills2 = false;
+                this.vPills3 = false;
             },
-            'screenHeight': function (val) { //监听屏幕高度变化
-                let oIframe = document.getElementById("Index");
-                oIframe.style.height = (Number(val) + 20) + 'px';
+            activePills2 :function () {
+                this.vPills1 = false;
+                this.vPills2 = true;
+                this.vPills3 = false;
+            },
+            activePills3: function () {
+                this.vPills1 = false;
+                this.vPills2 = false;
+                this.vPills3 = true;
             }
-        },
-        mounted() {
-            let _this = this;
-            _this.screenWidth = document.documentElement.clientWidth;
-            _this.screenHeight = document.documentElement.clientHeight;
-            window.onresize = function () { // 定义窗口大小变更通知事件
-                _this.screenWidth = document.documentElement.clientWidth; //窗口宽度
-            };
-        },/*
-        destroyed() {
-            window.removeEventListener('resize', function () {
-                this.contentStyleObj.height = window.innerHeight + 'px';
-            });//去除监听
-        },*/
+        }
     }
+
 </script>
 
 <style scoped>
     @import "../../../public/css/style.css";
-
-    .bg {
-        background: url('../../../public/img/bg_1.jpg') center center no-repeat;
-        background-size: cover;
-        transform: translateY(-75px); /**上移元素**/
-    }
-
-    @media (max-width: 992px) {
-        .bg{
-            transform: translateY(0px); /**恢复元素位移**/
-        }
-    }
-
 </style>
