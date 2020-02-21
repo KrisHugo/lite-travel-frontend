@@ -1,5 +1,5 @@
 <template>
-        <b-navbar id="TopBar" toggleable="lg" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
+        <b-navbar id="TopBar" toggleable="lg" class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light">
             <b-container>
                 <b-navbar-brand class="navbar-brand" to="/">
                     轻旅

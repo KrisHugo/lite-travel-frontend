@@ -18,6 +18,13 @@ export default new Router({
         path:'/index',
         name:'Home',
         component: index,
+        data: function(){
+            return {
+                contentStyleObj: {
+                    height: window.innerHeight - 210 + 'px',
+                },
+            };
+        }
     },{
         path:'/',
         redirect:'/index'
